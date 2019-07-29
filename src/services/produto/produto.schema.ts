@@ -13,16 +13,25 @@ let schema = {
 
   // Required fields.
   required: [
-    // !code: schema_required // !end
+    // !code: schema_required
+    'name', 'quantity', 'active'
+    // !end
   ],
   // Fields with unique values.
   uniqueItemProperties: [
-    // !code: schema_unique // !end
+    // !code: schema_unique
+    'name'
+    // !end
   ],
 
   // Fields in the model.
   properties: {
-    // !code: schema_properties // !end
+    // !code: schema_properties
+    id: {type: 'ID'},
+    name: {type: 'string'},
+    quantity: {type: 'integer'},
+    active: {type: 'boolean'}
+    // !end
   },
   // !code: schema_more // !end
 };
