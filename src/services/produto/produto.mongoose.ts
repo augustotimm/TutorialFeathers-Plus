@@ -9,7 +9,21 @@ import mongoose from 'mongoose';
 
 let moduleExports = merge({},
   // !<DEFAULT> code: model
-  {},
+  {
+    name: {
+      type: String,
+      required: true,
+      unique: true
+    },
+    quantity: {
+      type: Number,
+      required: true
+    },
+    active: {
+      type: Boolean,
+      required: true
+    }
+  },
   // !end
   // !code: moduleExports // !end
 );

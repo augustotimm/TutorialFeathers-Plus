@@ -5,12 +5,19 @@
 
 // tslint:disable-next-line:no-empty-interface
 export interface ProdutoBase {
-  // !code: interface // !end
+  // !<DEFAULT> code: interface
+  id: unknown;
+  name: string;
+  quantity: number;
+  active: boolean;
+  // !end
 }
 
 // tslint:disable-next-line:no-empty-interface
 export interface Produto extends ProdutoBase {
-  // !code: more // !end
+  // !<DEFAULT> code: more
+  id: any; // change if needed
+  // !end
 }
 
 // !code: funcs // !end
