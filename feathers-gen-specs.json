@@ -8,7 +8,15 @@
   },
   "app": {
     "environmentsAllowingSeedData": "",
-    "seedData": false
+    "seedData": false,
+    "name": "tutorial",
+    "description": "Project tutorial",
+    "src": "src",
+    "packager": "npm@>= 3.0.0",
+    "providers": [
+      "rest",
+      "socketio"
+    ]
   },
   "services": {},
   "hooks": {}
