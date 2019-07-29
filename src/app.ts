@@ -23,6 +23,7 @@ import channels from './channels';
 // tslint:disable-next-line
 const generatorSpecs = require('../feathers-gen-specs.json');
 
+import sequelize from './sequelize';
 // !code: imports // !end
 // !code: init // !end
 
@@ -71,6 +72,8 @@ app.configure(express.rest(
 app.configure(socketio(
   // !code: express_socketio // !end
 ));
+// Configure database adapters
+app.configure(sequelize);
 
 // Configure other middleware (see `middleware/index.ts`)
 app.configure(middleware);

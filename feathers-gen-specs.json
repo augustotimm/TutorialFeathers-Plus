@@ -18,6 +18,24 @@
       "socketio"
     ]
   },
-  "services": {},
-  "hooks": {}
+  "services": {
+    "produto": {
+      "name": "produto",
+      "nameSingular": "produto",
+      "subFolder": "",
+      "fileName": "produto",
+      "adapter": "sequelize",
+      "path": "/produto",
+      "isAuthEntity": false,
+      "graphql": true
+    }
+  },
+  "hooks": {},
+  "connections": {
+    "sequelize": {
+      "database": "postgres",
+      "adapter": "sequelize",
+      "connectionString": "postgres://postgres:@localhost:5432/tutorial"
+    }
+  }
 }

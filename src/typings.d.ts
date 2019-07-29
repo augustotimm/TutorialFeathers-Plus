@@ -7,6 +7,9 @@ declare module '*.json';
 
 // Application.
 
+// Services.
+declare module 'feathers-sequelize';
+
 // !code: more // !end
 
 // !code: funcs // !end
