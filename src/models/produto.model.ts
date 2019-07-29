@@ -39,6 +39,7 @@ let moduleExports = function (app: App) {
     // Define associations here for foreign keys
     //   - No foreign keys defined.
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    produto.belongsTo(models.categoria, {foreignKey: 'category'});
     // !code: sequelize_associations // !end
   };
 
