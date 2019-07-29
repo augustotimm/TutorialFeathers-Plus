@@ -1,6 +1,7 @@
 
 // Configure the Feathers services. (Can be re-generated.)
 import { App } from '../app.interface';
+import categoria from './categoria/categoria.service';
 import produto from './produto/produto.service';
 
 // !code: imports // !end
@@ -8,6 +9,7 @@ import produto from './produto/produto.service';
 
 // tslint:disable-next-line:no-unused-variable
 let moduleExports = function (app: App) {
+  app.configure(categoria);
   app.configure(produto);
   // !code: func_return // !end
 };

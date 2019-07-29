@@ -1,6 +1,7 @@
 
 // Application interface. (Can be re-generated.)
 import { Application } from '@feathersjs/express';
+import { Categoria } from './services/categoria/categoria.interface';
 import { Produto } from './services/produto/produto.interface';
 // !code: imports // !end
 // !code: init // !end
@@ -18,6 +19,7 @@ import { Produto } from './services/produto/produto.interface';
   });
  */
 export type App = Application<{
+  'categoria': Categoria,
   'produto': Produto,
   // !code: moduleExports // !end
 }>;

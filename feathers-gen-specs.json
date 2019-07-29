@@ -28,6 +28,16 @@
       "path": "/produto",
       "isAuthEntity": false,
       "graphql": true
+    },
+    "categoria": {
+      "name": "categoria",
+      "nameSingular": "categoria",
+      "subFolder": "",
+      "fileName": "categoria",
+      "adapter": "sequelize",
+      "path": "/categoria",
+      "isAuthEntity": false,
+      "graphql": true
     }
   },
   "hooks": {},

@@ -1,37 +1,32 @@
 
-// Define the Feathers schema for service `produto`. (Can be re-generated.)
+// Define the Feathers schema for service `categoria`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
 
 // Define the model using JSON-schema
 let schema = {
   // !<DEFAULT> code: schema_header
-  title: 'Produto',
-  description: 'Produto database.',
+  title: 'Categoria',
+  description: 'Categoria database.',
   // !end
   // !code: schema_definitions // !end
 
   // Required fields.
   required: [
     // !code: schema_required
-    'name', 'quantity', 'active'
+    'name'
     // !end
   ],
   // Fields with unique values.
   uniqueItemProperties: [
-    // !code: schema_unique
-    'name'
-    // !end
+    // !code: schema_unique // !end
   ],
 
   // Fields in the model.
   properties: {
     // !code: schema_properties
     id: {type: 'ID'},
-    name: {type: 'string'},
-    quantity: {type: 'integer'},
-    active: {type: 'boolean'},
-    category: {type: 'ID'}
+    name: {type: 'string'}
     // !end
   },
   // !code: schema_more // !end
@@ -42,12 +37,12 @@ let extensions = {
   // GraphQL generation.
   graphql: {
     // !code: graphql_header
-    name: 'Produto',
+    name: 'Categoria',
     service: {
       sort: { id: 1 },
     },
     // sql: {
-    //   sqlTable: 'Produto',
+    //   sqlTable: 'Categoria',
     //   uniqueKey: 'id',
     //   sqlColumn: {
     //     __authorId__: '__author_id__',
