@@ -14,7 +14,7 @@ let schema = {
   // Required fields.
   required: [
     // !code: schema_required
-    'name', 'quantity', 'active'
+    'name', 'quantity', 'active', 'category'
     // !end
   ],
   // Fields with unique values.
