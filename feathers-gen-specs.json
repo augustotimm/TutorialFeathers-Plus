@@ -38,6 +38,16 @@
       "path": "/categoria",
       "isAuthEntity": false,
       "graphql": true
+    },
+    "transaction": {
+      "name": "transaction",
+      "nameSingular": "transaction",
+      "subFolder": "",
+      "fileName": "transaction",
+      "adapter": "generic",
+      "path": "/transaction",
+      "isAuthEntity": false,
+      "graphql": false
     }
   },
   "hooks": {},
@@ -45,7 +55,7 @@
     "sequelize": {
       "database": "postgres",
       "adapter": "sequelize",
-      "connectionString": "postgres://postgres:@localhost:5432/tutorial"
+      "connectionString": "postgres://postgres:lnk@951@localhost:5432/tutorial"
     }
   }
 }

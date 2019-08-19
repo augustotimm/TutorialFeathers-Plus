@@ -11,5 +11,5 @@
       ""
     ]
   },
-  "postgres": "postgres://postgres:@localhost:5432/tutorial"
+  "postgres": "postgres://postgres:lnk@951@localhost:5432/tutorial"
 }

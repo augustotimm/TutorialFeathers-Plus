@@ -3,6 +3,7 @@
 import { Application } from '@feathersjs/express';
 import { Categoria } from './services/categoria/categoria.interface';
 import { Produto } from './services/produto/produto.interface';
+import { Transaction } from './services/transaction/transaction.interface';
 // !code: imports // !end
 // !code: init // !end
 
@@ -21,6 +22,7 @@ import { Produto } from './services/produto/produto.interface';
 export type App = Application<{
   'categoria': Categoria,
   'produto': Produto,
+  'transaction': Transaction,
   // !code: moduleExports // !end
 }>;
 // !code: funcs // !end
