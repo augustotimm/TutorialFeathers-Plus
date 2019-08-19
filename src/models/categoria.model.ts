@@ -40,7 +40,7 @@ let moduleExports = function (app: App) {
     //   - No foreign keys defined.
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
     // !code: sequelize_associations
-    categoria.hasMany(models.produto, {onDelete: 'cascade'});
+    //categoria.hasMany(models.produto, {onDelete: 'cascade'});
     // !end
   };
 
