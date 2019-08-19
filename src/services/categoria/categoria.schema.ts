@@ -53,8 +53,9 @@ let extensions = {
       // !code: graphql_discard // !end
     ],
     add: {
-      // !<DEFAULT> code: graphql_add
+      // !code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: 'id' } },
+      produto: {type: '[Produto]', args: true, relation: {ourTable: 'id', otherTable: 'category'}}
       // !end
     },
     // !code: graphql_more // !end

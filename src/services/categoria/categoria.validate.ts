@@ -17,9 +17,18 @@ let base = merge({},
   {
     title: "Categoria",
     description: "Categoria database.",
-    required: [],
+    required: [
+      "name"
+    ],
     uniqueItemProperties: [],
-    properties: {}
+    properties: {
+      id: {
+        type: ID
+      },
+      name: {
+        type: "string"
+      }
+    }
   },
   // !end
   // !code: base_more // !end

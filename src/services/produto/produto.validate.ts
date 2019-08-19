@@ -20,7 +20,8 @@ let base = merge({},
     required: [
       "name",
       "quantity",
-      "active"
+      "active",
+      "category"
     ],
     uniqueItemProperties: [
       "name"
@@ -37,6 +38,9 @@ let base = merge({},
       },
       active: {
         type: "boolean"
+      },
+      category: {
+        type: ID
       }
     }
   },

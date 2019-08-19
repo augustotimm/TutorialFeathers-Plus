@@ -10,6 +10,7 @@ export interface ProdutoBase {
   name: string;
   quantity: number;
   active: boolean;
+  category: unknown;
   // !end
 }
 
@@ -17,6 +18,7 @@ export interface ProdutoBase {
 export interface Produto extends ProdutoBase {
   // !<DEFAULT> code: more
   id: any; // change if needed
+  category: any; // change if needed
   // !end
 }
 

@@ -37,10 +37,11 @@ let moduleExports = function (app: App) {
   // tslint:disable-next-line:no-unused-variable
   produto.associate = function (models) {
     // Define associations here for foreign keys
-    //   - No foreign keys defined.
+    //   - category
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    // !code: sequelize_associations
     produto.belongsTo(models.categoria, {foreignKey: 'category'});
-    // !code: sequelize_associations // !end
+    // !end
   };
 
   // !code: sequelize_func_return // !end

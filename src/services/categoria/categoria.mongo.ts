@@ -13,8 +13,14 @@ let moduleExports = merge({},
     properties: {
       _id: {
         bsonType: "objectId"
+      },
+      name: {
+        bsonType: "string"
       }
-    }
+    },
+    required: [
+      "name"
+    ]
   },
   // !end
   // !code: moduleExports // !end

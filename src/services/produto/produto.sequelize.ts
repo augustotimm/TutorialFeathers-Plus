@@ -28,6 +28,10 @@ let moduleExports = merge({},
     active: {
       type: DataTypes.BOOLEAN,
       allowNull: false
+    },
+    category: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   } as DefineAttributes,
   // !end

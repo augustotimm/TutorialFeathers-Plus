@@ -5,12 +5,17 @@
 
 // tslint:disable-next-line:no-empty-interface
 export interface CategoriaBase {
-  // !code: interface // !end
+  // !<DEFAULT> code: interface
+  id: unknown;
+  name: string;
+  // !end
 }
 
 // tslint:disable-next-line:no-empty-interface
 export interface Categoria extends CategoriaBase {
-  // !code: more // !end
+  // !<DEFAULT> code: more
+  id: any; // change if needed
+  // !end
 }
 
 // !code: funcs // !end

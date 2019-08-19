@@ -22,12 +22,16 @@ let moduleExports = merge({},
       },
       active: {
         bsonType: "boolean"
+      },
+      category: {
+        bsonType: "objectId"
       }
     },
     required: [
       "name",
       "quantity",
-      "active"
+      "active",
+      "category"
     ]
   },
   // !end

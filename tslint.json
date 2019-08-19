@@ -12,7 +12,7 @@
     ],
     "interface-name": false,
     "linebreak-style": [
-      true,
+      false,
       "LF"
     ],
     "max-line-length": false,
