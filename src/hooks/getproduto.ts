@@ -13,7 +13,7 @@ export default function (): Hook {
           id: context.data.id
         }
       });
-      context.data.produto = queryResult;
+      context.params.produto = queryResult;
     }
     return context;
 
