@@ -2,7 +2,10 @@
 // Hooks for service `transaction`. (Can be re-generated.)
 import * as commonHooks from 'feathers-hooks-common';
 import { HooksObject } from '@feathersjs/feathers';
-// !code: imports // !end
+// !code: imports
+import getProduto from '../../hooks/getproduto';
+
+// !end
 
 // !<DEFAULT> code: used
 // tslint:disable-next-line:no-unused-variable
@@ -16,11 +19,11 @@ const { create, update, patch, validateCreate, validateUpdate, validatePatch } =
 
 let moduleExports: HooksObject = {
   before: {
-    // !<DEFAULT> code: before
+    // !code: before
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [getProduto()],
     update: [],
     patch: [],
     remove: []
