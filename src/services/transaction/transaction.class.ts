@@ -46,18 +46,18 @@ export class Service implements Partial<ServiceMethods<any>>, SetupMethod {
 
     let productService: any = this.app.service('/produto');
     let produto: any = params.produto;
-    const input: any = data;
     if (data.hasOwnProperty('quantity')) {
 
-      if (produto !== undefined && input.quantity !== undefined) {
-        let availableQuantity = produto.quantity - input.quantity;
+      if (produto !== undefined && (data as any).quantity >= 0) {
+        let availableQuantity = produto.quantity - (data as any).quantity;
         produto.quantity = availableQuantity;
         let patchResult = await productService.patch(null, produto);
         return patchResult;
+      } else {
+        throw new Error('Quantity must be greater than 0');
       }
     }
-
-    return 'necessário enviar a quantidade';
+    return '';
   }
   // !end
 
