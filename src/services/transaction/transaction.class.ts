@@ -21,8 +21,8 @@ export class Service implements Partial<ServiceMethods<any>>, SetupMethod {
     // !code: constructor1 // !end
   }
 
-  // !<DEFAULT> code: setup
-  public setup (app: App, path: string): void {
+  // !code: setup
+  public setup (app: any, path: string): void {
     this.app = app;
   }
   // !end
@@ -41,13 +41,23 @@ export class Service implements Partial<ServiceMethods<any>>, SetupMethod {
   }
   // !end
 
-  // !<DEFAULT> code: create
-  public async create (data: Partial<any> | Array<Partial<any>>, params?: Params): Promise<any> {
-    if (Array.isArray(data)) {
-      return Promise.all(data.map(current => this.create(current, params)));
+  // !code: create
+  public async create (data: Partial<any> | Array<Partial<any>>, params: Params): Promise<any> {
+
+    let productService: any = this.app.service('/produto');
+    let produto: any = params.produto;
+    const input: any = data;
+    if (data.hasOwnProperty('quantity')) {
+
+      if (produto !== undefined && input.quantity !== undefined) {
+        let availableQuantity = produto.quantity - input.quantity;
+        produto.quantity = availableQuantity;
+        let patchResult = await productService.patch(null, produto);
+        return patchResult;
+      }
     }
 
-    return data;
+    return 'necessário enviar a quantidade';
   }
   // !end
 
