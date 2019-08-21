@@ -4,6 +4,7 @@ import { Application } from '@feathersjs/express';
 import { Categoria } from './services/categoria/categoria.interface';
 import { Produto } from './services/produto/produto.interface';
 import { Transaction } from './services/transaction/transaction.interface';
+import { User } from './services/users/users.interface';
 // !code: imports // !end
 // !code: init // !end
 
@@ -23,6 +24,7 @@ export type App = Application<{
   'categoria': Categoria,
   'produto': Produto,
   'transaction': Transaction,
+  'users': User,
   // !code: moduleExports // !end
 }>;
 // !code: funcs // !end
