@@ -22,7 +22,6 @@ import appHooks from './app.hooks';
 import channels from './channels';
 // tslint:disable-next-line
 const generatorSpecs = require('../feathers-gen-specs.json');
-import authentication from './authentication';
 
 import sequelize from './sequelize';
 // !code: imports // !end
@@ -74,12 +73,10 @@ app.configure(socketio(
   // !code: express_socketio // !end
 ));
 // Configure database adapters
-app.configure(sequelize as any);
+app.configure(sequelize);
 
 // Configure other middleware (see `middleware/index.ts`)
 app.configure(middleware);
-// Configure authentication (see `authentication.ts`)
-app.configure(authentication);
 // Set up our services (see `services/index.ts`)
 app.configure(services);
 // Set up event channels (see channels.ts)
