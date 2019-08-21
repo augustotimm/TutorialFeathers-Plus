@@ -48,6 +48,17 @@
       "path": "/transaction",
       "isAuthEntity": false,
       "graphql": false
+    },
+    "users": {
+      "name": "users",
+      "nameSingular": "user",
+      "subFolder": "",
+      "fileName": "users",
+      "adapter": "sequelize",
+      "path": "/users",
+      "isAuthEntity": true,
+      "requiresAuth": true,
+      "graphql": true
     }
   },
   "hooks": {},
@@ -57,5 +68,11 @@
       "adapter": "sequelize",
       "connectionString": "postgres://postgres:lnk@951@localhost:5432/tutorial"
     }
+  },
+  "authentication": {
+    "strategies": [
+      "local"
+    ],
+    "entity": "users"
   }
 }

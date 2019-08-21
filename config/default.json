@@ -11,5 +11,29 @@
       ""
     ]
   },
-  "postgres": "postgres://postgres:lnk@951@localhost:5432/tutorial"
+  "postgres": "postgres://postgres:lnk@951@localhost:5432/tutorial",
+  "authentication": {
+    "secret": "93337f439ee0a11b1746a7ea7cff03c3782aec75b677aae0a74f4a053085d980aafd670fbded083b476f905d8929cbe7bb6f501cc868f247573aa2032a92770b2ffb83d5cc63cba9d914444667f6cd45c6977af3062cc9394d7c0bdf8609c3528610d3ed79711020d4bc43bf2cffa274ea15c3335908ac8834d222ecfa7b2d47ac2a6490f531bc95677d4eefaf4733198e4459b153944e519df3aeddcbf5499fe70a077446b9a57a21acc29ae921af3513eea9a1e67be192dc1734f86130eca0da9a4f1fbf02bca1aee8cd763b0bf879c4b942834058653c209766ed0e2789280da043dddaac7570dac717eb9cda194cd685fe6be333510924c278a4778436c0",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
 }
