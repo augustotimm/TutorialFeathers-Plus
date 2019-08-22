@@ -2,6 +2,8 @@
 // Hooks for service `transaction`. (Can be re-generated.)
 import * as commonHooks from 'feathers-hooks-common';
 import { HooksObject } from '@feathersjs/feathers';
+import { hooks as authHooks } from '@feathersjs/authentication';
+const { authenticate } = authHooks;
 // !code: imports
 import getProduto from '../../hooks/getproduto';
 
@@ -19,6 +21,8 @@ const { create, update, patch, validateCreate, validateUpdate, validatePatch } =
 
 let moduleExports: HooksObject = {
   before: {
+    // Your hooks should include:
+    //   all   : authenticate('jwt')
     // !code: before
     all: [],
     find: [],

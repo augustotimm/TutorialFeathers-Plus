@@ -2,6 +2,8 @@
 // Hooks for service `categoria`. (Can be re-generated.)
 import * as commonHooks from 'feathers-hooks-common';
 import { HooksObject } from '@feathersjs/feathers';
+import { hooks as authHooks } from '@feathersjs/authentication';
+const { authenticate } = authHooks;
 // !code: imports // !end
 
 // !<DEFAULT> code: used
@@ -16,8 +18,10 @@ const { create, update, patch, validateCreate, validateUpdate, validatePatch } =
 
 let moduleExports: HooksObject = {
   before: {
+    // Your hooks should include:
+    //   all   : authenticate('jwt')
     // !<DEFAULT> code: before
-    all: [],
+    all: [ authenticate('jwt') ],
     find: [],
     get: [],
     create: [],

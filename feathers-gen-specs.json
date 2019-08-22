@@ -27,6 +27,7 @@
       "adapter": "sequelize",
       "path": "/produto",
       "isAuthEntity": false,
+      "requiresAuth": true,
       "graphql": true
     },
     "categoria": {
@@ -37,6 +38,7 @@
       "adapter": "sequelize",
       "path": "/categoria",
       "isAuthEntity": false,
+      "requiresAuth": true,
       "graphql": true
     },
     "transaction": {
@@ -47,6 +49,7 @@
       "adapter": "generic",
       "path": "/transaction",
       "isAuthEntity": false,
+      "requiresAuth": true,
       "graphql": false
     },
     "users": {
