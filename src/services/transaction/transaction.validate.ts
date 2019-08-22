@@ -27,8 +27,10 @@ let base = merge({},
 // !code: base_change // !end
 
 let create = merge({},
-  base, {required: ['id', 'quantity']}
-  // !code: create_more // !end
+  base,
+  // !code: create_more
+  {required: ['id', 'quantity']}
+  // !end
 );
 
 let update = merge({},

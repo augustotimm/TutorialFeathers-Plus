@@ -9,7 +9,18 @@ import mongoose from 'mongoose';
 
 let moduleExports = merge({},
   // !<DEFAULT> code: model
-  {},
+  {
+    nome: String,
+    email: {
+      type: String,
+      required: true,
+      unique: true
+    },
+    password: {
+      type: String,
+      required: true
+    }
+  },
   // !end
   // !code: moduleExports // !end
 );

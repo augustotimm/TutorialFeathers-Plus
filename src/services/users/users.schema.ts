@@ -13,16 +13,25 @@ let schema = {
 
   // Required fields.
   required: [
-    // !code: schema_required // !end
+    // !code: schema_required
+    'email', 'name', 'password'
+    // !end
   ],
   // Fields with unique values.
   uniqueItemProperties: [
-    // !code: schema_unique // !end
+    // !code: schema_unique
+    'email'
+    // !end
   ],
 
   // Fields in the model.
   properties: {
-    // !code: schema_properties // !end
+    // !code: schema_properties
+    id: {type: 'ID'},
+    nome: {type: 'string'},
+    email: {type: 'string'},
+    password: {type: 'string'}
+    // !end
   },
   // !code: schema_more // !end
 };
